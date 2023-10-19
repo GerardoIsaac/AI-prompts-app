@@ -1,5 +1,11 @@
 import NextAuth from "next-auth/next";
 import GoogleProvider from "next-auth/providers/google";
+import { connectToDB } from "@utils/database";
+
+console.log({
+  clientId: process.env.GOOGLE_ID,
+  clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+});
 
 const handler = NextAuth({
   providers: [
@@ -11,7 +17,17 @@ const handler = NextAuth({
   async session({ session }) {},
   async signIn({ provider }) {
     try {
-    } catch (error) {}
+      await connectToDB();
+
+      // chech if a user already exists
+
+      // if not, create a new user
+
+      return true;
+    } catch (error) {
+      console.log(error);
+      return false;
+    }
   },
 });
 
