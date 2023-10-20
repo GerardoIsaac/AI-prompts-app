@@ -8,11 +8,19 @@ import Form from "@components/Form";
 
 const CreatePrompt = () => {
   const [submitting, setSubmitting] = useState(false);
-  const [Post, setPost] = useState({ prompt: "", tag: "" });
+  const [post, setPost] = useState({ prompt: "", tag: "" });
 
   const createPrompt = async (e) => {};
 
-  return <Form />;
+  return (
+    <Form
+      type="Create"
+      post={post}
+      setPost={setPost}
+      submitting={submitting}
+      handleSubmit={createPrompt}
+    />
+  );
 };
 
 export default CreatePrompt;
