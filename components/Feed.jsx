@@ -47,7 +47,12 @@ const Feed = () => {
     );
   };
 
-  const handleTagClick = () => {};
+  const handleTagClick = (tagName) => {
+    setSearchText(tagName);
+
+    const searchResult = filterPrompts(tagName);
+    setSearchedResults(searchResult);
+  };
 
   const fetchPosts = async () => {
     const response = await fetch("/api/prompt");
