@@ -22,7 +22,9 @@ const ProfilePage = () => {
     if (session?.user.id) fetchPosts();
   }, []);
 
-  const handleEdit = () => {};
+  const handleEdit = () => {
+    
+  };
 
   const handleDelete = async () => {};
 
