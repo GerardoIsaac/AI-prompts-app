@@ -18,7 +18,7 @@ Tool to create and share AI prompts
 
 ## Contact me
 
-Write me at gerardoisaac.cm@gmail.com
+Write me at <gerardoisaac.cm@gmail.com>
 
 ## Licence
 
